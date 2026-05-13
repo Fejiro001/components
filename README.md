@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# One Scoop Co.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![One Scoop Co. Homepage Preview](./src/media/images/website.png)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+**One Scoop Co.** is a responsive mock ice cream shop website built with React. The project showcases a playful and modern user interface for an artisanal dessert brand, featuring flavour galleries, smooth animations, and responsive navigation.
 
-### `npm start`
+The application was developed as part of a React front-end project and focuses on reusable components, responsive layouts, clean UI structure, and interactive user experiences.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Responsive desktop-first design
+- Interactive mobile navigation menu
+- Dynamic gallery rendering using React props and `.map()`
+- Smooth animations and transitions
+- Semantic and accessible JSX structure
+- Modern playful UI design
+- State management for mobile menu toggle
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Front-End
 
-### `npm run build`
+- React
+- CSS
+- JavaScript
+- NPM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tools Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- VS Code
+- Git
+- GitHub
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key Implementation Details
 
-### `npm run eject`
+### Dynamic List Rendering
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The flavour gallery is dynamically rendered using the JavaScript `.map()` method in React.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```jsx
+  <section id="flavours" className="gallery">
+    <div className="container gallery-container">
+      <h2>Our Flavours</h2>
+      <p>Every scoop is made with love and the freshest ingredients.</p>
+      <ul className="gallery-list">
+        {props.imageURLs.map((image) => (
+          <li key={image.index}>
+            <div className="image-container">
+              <img src={image.url} alt={`One Scoop Co. flavour ${image.index + 1}`} />
+            </div>
+            <div className="image-info">
+              <p className="image-name">{image.name}</p>
+              <p>Small • Medium • Large</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click [here]() to demo
