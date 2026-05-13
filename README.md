@@ -63,4 +63,4 @@ The flavour gallery is dynamically rendered using the JavaScript `.map()` method
 
 ## Demo
 
-Click [here]() to demo
+Click [here](https://fejiro001.github.io/components/) to demo
